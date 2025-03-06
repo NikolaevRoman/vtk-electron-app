@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+/.vscode
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+#react app
+/vtk-react-app/node_modules
+/vtk-react-app/build

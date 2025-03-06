@@ -1,0 +1,18 @@
+{
+	"name": "vtk-viewer",
+	"version": "1.0.0",
+	"description": "A simple vtk viewer to learn vtk.",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build-all": "set \"CI=false\" && cd ./atlas-ui && npm run build && cd .. && npm run electron-build",
+		"build": "set \"CI=false\" && npm run electron-build",
+		"electron-build": "electron-builder"
+	},
+	"author": "nikolaev_ra",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^35.0.0"
+	}
+}
