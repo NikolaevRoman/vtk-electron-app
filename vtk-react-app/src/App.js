@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useState } from "react";
 import './App.css';
 //------
 // all these imports are necessary for proper loading of vtk.js lib
@@ -13,14 +13,25 @@ import Cone from "./Examples/Cone";
 import Volume from "./Examples/Volume";
 import VolumeTransfer from "./Examples/Volume-transfer";
 
+export const AppContext = React.createContext();
 
 function App() {
+  //states
+  const [vti, setVti] = useState();
+  //functions
+  const handleVtiUpload = async () => {
+    const arrayBuffer = await window.electronApi.loadFile();
+    setVti(arrayBuffer);
+  }
   return (
-    <div className="App">
-      {/* <Cone /> */}
-      {/* <Volume /> */}
-      <VolumeTransfer />
-    </div>
+    <AppContext.Provider value={{vti}}>
+      <div className="App">
+        <button onClick={handleVtiUpload}>Загрузить VTI...</button>
+        {/* <Cone /> */}
+        {/* <Volume /> */}
+        <VolumeTransfer />
+      </div>
+    </AppContext.Provider>
   );
 }
 
