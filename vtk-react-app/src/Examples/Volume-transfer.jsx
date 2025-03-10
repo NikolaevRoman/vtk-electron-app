@@ -35,7 +35,7 @@ export default function VolumeTransfer() {
     const lookupTable = vtkColorTransferFunction.newInstance();
     const piecewiseFun = vtkPiecewiseFunction.newInstance();
 
-    lookupTable.applyColorMap(vtkColorMaps.getPresetByName("Cool to Warm"));
+    lookupTable.applyColorMap(vtkColorMaps.getPresetByName("Cool to Warm (Extended)"));
     lookupTable.setMappingRange(0,256);
     lookupTable.updateRange();
 

@@ -12,6 +12,7 @@ import '@kitware/vtk.js/IO/Core/DataAccessHelper/JSZipDataAccessHelper';
 import Cone from "./Examples/Cone";
 import Volume from "./Examples/Volume";
 import VolumeTransfer from "./Examples/Volume-transfer";
+import ImageSlicing from "./Examples/Image-slicing";
 
 export const AppContext = React.createContext();
 
@@ -29,7 +30,8 @@ function App() {
         <button onClick={handleVtiUpload}>Загрузить VTI...</button>
         {/* <Cone /> */}
         {/* <Volume /> */}
-        <VolumeTransfer />
+        {/* <VolumeTransfer /> */}
+        <ImageSlicing />
       </div>
     </AppContext.Provider>
   );
